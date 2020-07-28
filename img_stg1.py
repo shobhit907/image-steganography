@@ -20,12 +20,12 @@ def encrypt():
 
 def decrypt():
     img=cv2.imread('pic3in2.png')
-    width=img.shape[0]
-    height=img.shape[1]
-    img1=np.zeros((width,height,3),np.uint8)
-    img2=np.zeros((width,height,3),np.uint8)
-    for i in range(width):
-        for j in range(height):
+    width=img.shape[1]
+    height=img.shape[0]
+    img1=np.zeros((height,width,3),np.uint8)
+    img2=np.zeros((height,width,3),np.uint8)
+    for i in range(height):
+        for j in range(width):
             for l in range(3):
                 v1=format(img[i][j][l],'08b')
                 v2=v1[:4]+chr(random.randint(0,1)+48)*4

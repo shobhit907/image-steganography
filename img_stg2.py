@@ -2,9 +2,10 @@ import cv2
 import numpy as np
 import random
 
-msg="Hello my name is Shobhit"
-# with open("input1.txt",'r') as f:
-#     msg=' '.join(f.readlines())
+# msg="Hello my name is Shobhit"
+msg=""
+with open("input1.txt",'r') as f:
+    msg=''.join(f.readlines())
     # print(msg)
 
 def str_to_bin(msg):
@@ -28,7 +29,7 @@ def steg1(msg):
             for l in range(3):
                 if(img[i,j,l]%2==0):
                     if(bin_msg[index][k]=='1'):
-                        img[i,j,l]=img[i,j,l]+1
+                        img[i,j,l]+=1
                 else:
                     if(bin_msg[index][k]=='0'):
                         img[i,j,l]+=1
