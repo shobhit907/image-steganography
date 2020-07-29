@@ -22,6 +22,8 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(38, 31, 31);
 font: 75 italic 11pt &quot;Noto Serif CJK JP&quot;;
+color:white;
+
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -29,10 +31,8 @@ font: 75 italic 11pt &quot;Noto Serif CJK JP&quot;;
     <item>
      <widget class="QTabWidget" name="EncDecTab">
       <property name="styleSheet">
-       <string notr="true">color:white;
-QTabWidget::tab-bar{background-color: green;}
-QTabBar::tab{
-background-color: green;
+       <string notr="true">QTabBar::tab:selected{
+	background-color:rgb(144, 90, 237);
 }
 
 
@@ -52,12 +52,7 @@ background-color: green;
       </property>
       <widget class="QWidget" name="EncTab">
        <property name="styleSheet">
-        <string notr="true">border:1px solid;
-border-color: rgb(252, 233, 79);
-QWidget::selected {
-  background-color: green;
- }
-</string>
+        <string notr="true"/>
        </property>
        <attribute name="title">
         <string>Encrypt</string>
@@ -79,6 +74,11 @@ QWidget::selected {
               <height>10000000</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border:1px solid;
+border-color: rgb(111, 112, 107);
+background-color:rgb(43, 36, 36);</string>
+            </property>
             <property name="plainText">
              <string/>
             </property>
@@ -86,14 +86,26 @@ QWidget::selected {
           </item>
           <item>
            <widget class="QPushButton" name="encOpenFile">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Open File</string>
@@ -106,6 +118,10 @@ color:black;
          <layout class="QVBoxLayout" name="encBackImage">
           <item>
            <widget class="QFrame" name="encBackImageFrame">
+            <property name="styleSheet">
+             <string notr="true">border:1px solid;
+border-color: rgb(111, 112, 107);</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -134,14 +150,26 @@ color:black;
           </item>
           <item>
            <widget class="QPushButton" name="encOpenImageButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Open Image in which to Encrypt</string>
@@ -154,14 +182,26 @@ color:black;
          <layout class="QVBoxLayout" name="encOutputLayout">
           <item>
            <widget class="QPushButton" name="encButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Encrypt Text In Image</string>
@@ -170,6 +210,10 @@ color:black;
           </item>
           <item>
            <widget class="QFrame" name="encOutputFrame">
+            <property name="styleSheet">
+             <string notr="true">border:1px solid;
+border-color: rgb(111, 112, 107);</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -198,14 +242,26 @@ color:black;
           </item>
           <item>
            <widget class="QPushButton" name="encSaveButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Save Image</string>
@@ -218,9 +274,7 @@ color:black;
       </widget>
       <widget class="QWidget" name="DecTab">
        <property name="styleSheet">
-        <string notr="true">border:1px solid;
-border-color: rgb(252, 233, 79);
-</string>
+        <string notr="true"/>
        </property>
        <attribute name="title">
         <string>Decrypt</string>
@@ -232,6 +286,10 @@ border-color: rgb(252, 233, 79);
            <layout class="QVBoxLayout" name="decImageLayout">
             <item>
              <widget class="QFrame" name="decInputImageFrame">
+              <property name="styleSheet">
+               <string notr="true">border:1px solid;
+border-color: rgb(111, 112, 107);</string>
+              </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
@@ -262,14 +320,26 @@ border-color: rgb(252, 233, 79);
           </item>
           <item>
            <widget class="QPushButton" name="decOpenImageButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Open Image to Decrypt</string>
@@ -292,10 +362,16 @@ color:black;
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Decrypt Text from Image</string>
@@ -310,6 +386,11 @@ color:black;
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border:1px solid;
+border-color: rgb(111, 112, 107);
+background-color:rgb(43, 36, 36);</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -317,14 +398,26 @@ color:black;
           </item>
           <item>
            <widget class="QPushButton" name="decSaveButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton::hover {
-    background-color: rgb(138, 226, 52);
-color:black;
-};</string>
+             <string notr="true">QPushButton{
+background-color: rgb(92, 92, 242);
+border-radius:15px;
+}
+QPushButton:hover {
+    background-color: rgb(134, 202, 244);
+	color:black;
+	border-radius:15px;
+}
+</string>
             </property>
             <property name="text">
              <string>Save File</string>
