@@ -49,7 +49,7 @@ def steg1(msg):
     cv2.imwrite('pic_pr2.png',img)
 
 def steg1_dec():
-    img=cv2.imread('pic_pr2.png')
+    img=cv2.imread('output.jpg  ')
     out=""
     k=0
     bin_out=""
@@ -78,7 +78,7 @@ def steg1_dec():
                     break
     return out
 
-steg1(msg)
+# steg1(msg)
 print(steg1_dec())
 
 # def steg2(msg):

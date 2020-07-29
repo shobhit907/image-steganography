@@ -39,7 +39,7 @@ background-color: green;
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -133,7 +133,7 @@ color:black;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="encOpenImage">
+           <widget class="QPushButton" name="encOpenImageButton">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -197,7 +197,7 @@ color:black;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="encSaveImage">
+           <widget class="QPushButton" name="encSaveButton">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -231,19 +231,37 @@ border-color: rgb(252, 233, 79);
           <item>
            <layout class="QVBoxLayout" name="decImageLayout">
             <item>
-             <widget class="QFrame" name="decInputImage">
+             <widget class="QFrame" name="decInputImageFrame">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLabel" name="decInputImageLabel">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:none</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <widget class="QPushButton" name="decOpenImage">
+           <widget class="QPushButton" name="decOpenImageButton">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -263,24 +281,24 @@ color:black;
         <item>
          <layout class="QVBoxLayout" name="decOutputLayout">
           <item>
-           <widget class="QLabel" name="decOutputLabel">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
+           <widget class="QPushButton" name="decButton">
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>40</height>
+              <height>30</height>
              </size>
             </property>
-            <property name="text">
-             <string>Hidden text inside image</string>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+            <property name="styleSheet">
+             <string notr="true">QPushButton::hover {
+    background-color: rgb(138, 226, 52);
+color:black;
+};</string>
+            </property>
+            <property name="text">
+             <string>Decrypt Text from Image</string>
             </property>
            </widget>
           </item>
@@ -292,10 +310,13 @@ color:black;
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="decSaveOutputFile">
+           <widget class="QPushButton" name="decSaveButton">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>

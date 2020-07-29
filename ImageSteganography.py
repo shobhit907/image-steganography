@@ -38,4 +38,34 @@ class Steganography:
                     k=0
                     index+=1
         return img
+
+    @staticmethod
+    def decrypt(img):
+        out=""
+        k=0
+        bin_out=""
+        done=False
+        for i in range(img.shape[0]):
+            if done:
+                break
+            for j in range(img.shape[1]):
+                if done:
+                    break
+                for l in range(3):
+                    if(img[i][j][l]%2==1):
+                        bin_out+='1'
+                    else:
+                        bin_out+='0'
+                    k+=1
+                    if(k==8):
+                        break
+                if(k==8):
+                    # print(bin_out)
+                    out+=chr(int(bin_out,2))
+                    bin_out=""
+                    k=0
+                    if(img[i][j][2]%2==1):
+                        done=True
+                        break
+        return out
         
