@@ -1,2 +1,3 @@
 # image-steganography
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cqxVh0v_Vxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![Watch the video](https://img.youtube.com/vi/cqxVh0v_Vxs/maxresdefault.jpg)](https://youtu.be/cqxVh0v_Vxs)
