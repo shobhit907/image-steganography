@@ -14,3 +14,7 @@ For decryption, provided the above output image file as input and the original t
 See the video below for working demo.:)
 
 [![Watch the video](https://img.youtube.com/vi/cqxVh0v_Vxs/maxresdefault.jpg)](https://youtu.be/cqxVh0v_Vxs)
+
+
+Steganography is performed by LSB technique.
+UI is designed using PyQt5
